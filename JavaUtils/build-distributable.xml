@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project JavaUtils with libraries in sub-folder">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="C:/SourceCode/ScratchPad/_dist/JavaUtils.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.zen.Program"/>
+                <attribute name="Class-Path" value=". JavaUtils_lib/jtds-1.2.5.jar"/>
+            </manifest>
+            <fileset dir="C:/SourceCode/ScratchPad/JavaUtils/bin"/>
+        </jar>
+        <delete dir="C:/SourceCode/ScratchPad/_dist/JavaUtils_lib"/>
+        <mkdir dir="C:/SourceCode/ScratchPad/_dist/JavaUtils_lib"/>
+        <copy file="C:/SourceCode/ScratchPad/JavaUtils/lib/jtds-1.2.5.jar" todir="C:/SourceCode/ScratchPad/_dist/JavaUtils_lib"/>
+    </target>
+</project>
